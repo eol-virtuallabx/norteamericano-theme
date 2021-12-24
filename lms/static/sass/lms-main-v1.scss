@@ -4,6 +4,7 @@
 // Import our custom overrides
 @import 'overrides';
 
-.action.action-primary.action-update.js-register.register-button{
+.action.action-primary.action-update.js-register.register-button,
+#register-form div.form-field.text-name{
     display: block !important;
 }
