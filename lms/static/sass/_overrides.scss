@@ -29,6 +29,9 @@ header.global-header{
 .courses-container{
 	padding:16px;
 }
+.global-header .nav-links .main .nav-tab a {
+    color: #fff;
+}
 @media (max-width:991px){
 	.home > header{
 		width:100%;
@@ -87,7 +90,7 @@ header.global-header{
 		color:#fff ;
 	}
 	.global-header .nav-links .secondary .dropdown-user-menu .dropdown-item a{
-		color:#313131 !important;
+		color:#fff !important;
 	}
 	.global-header .nav-links .secondary .toggle-user-dropdown{
 		 color:#fff;
