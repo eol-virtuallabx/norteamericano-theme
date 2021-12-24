@@ -29,9 +29,6 @@ header.global-header{
 .courses-container{
 	padding:16px;
 }
-.global-header .nav-links .main .nav-tab a {
-    color: #fff;
-}
 @media (max-width:991px){
 	.home > header{
 		width:100%;
@@ -87,16 +84,16 @@ header.global-header{
 		display: none!important;
 	}
 	.global-header .nav-links .secondary .nav-item a{
-		color:#fff ;
+		color:#fff !important;
 	}
 	.global-header .nav-links .secondary .dropdown-user-menu .dropdown-item a{
-		color:#fff !important;
+		color:#313131 !important;
 	}
 	.global-header .nav-links .secondary .toggle-user-dropdown{
 		 color:#fff;
 	}
 	.global-header .nav-links .main .nav-tab a{
-		color:#fff;
+		color:#fff !important;
 	}
 	.wrapper-footer .wrapper-logo img{
                 max-width:580px !important;
