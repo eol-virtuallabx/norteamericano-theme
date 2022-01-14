@@ -1,5 +1,5 @@
 define([
-    'jquery', 'gettext', 'js/models/settings/advanced', 'eol-uchile-2020/js/views/settings/advanced'
+    'jquery', 'gettext', 'js/models/settings/advanced', 'norteamericano-theme/js/views/settings/advanced'
 ], function($, gettext, AdvancedSettingsModel, AdvancedSettingsView) {
     'use strict';
     return function(advancedDict, advancedSettingsUrl, publisherEnabled) {
