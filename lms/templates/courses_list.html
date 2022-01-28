@@ -1,7 +1,7 @@
 <%page expression_filter="h"/>
 <%namespace name='static' file='static_content.html'/>
 <%! from django.utils.translation import ugettext as _ %>
-
+<%  CJLANDES = [] %>
 <section class="courses-container container">
    <h2 class="course-tittle">CURSOS NORTEAMERICANO</h2>
   <section class="highlighted-courses">
@@ -11,9 +11,13 @@
         <ul class="courses-listing">
           ## limiting the course number by using HOMEPAGE_COURSE_MAX as the maximum number of courses
           %for course in courses[:homepage_course_max]:
-          <li class="courses-listing-item">
-              <%include file="course.html" args="course=course" />
-          </li>
+            % if 'CJLANDES' in course.org:
+              <%  CJLANDES.append(course) %>
+            % else:
+            <li class="courses-listing-item">
+                <%include file="course.html" args="course=course" />
+            </li>
+            % endif
         %endfor
         </ul>
       </section>
@@ -25,5 +29,22 @@
     % endif
     % endif
 
+  </section>
+
+  % if len(CJLANDES) > 0:
+    <h2 class="course-tittle" style="background: #ff2160;">EXCLUSIVO AFILIADOS CAJA LOS ANDES</h2>
+    <section class="highlighted-courses">
+
+        <section class="courses">
+          <ul class="courses-listing">
+            ## limiting the course number by using HOMEPAGE_COURSE_MAX as the maximum number of courses
+            %for course in CJLANDES:
+              <li class="courses-listing-item">
+                  <%include file="course.html" args="course=course" />
+              </li>
+          %endfor
+          </ul>
+        </section>
+  % endif
   </section>
 </section>
